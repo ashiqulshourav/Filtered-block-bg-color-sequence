@@ -39,11 +39,16 @@ tabButtons.forEach((button) => {
             removeHiddenClass();
             // add hidden class for rest element
             remainingItems.forEach((item) => {
-                item.classList.add('hidden')
+                item.classList.add('hidden');
+
+                // add color for filtered items
                 addColor(filteredItems);
             });
         } else {
+            // remove hidden class from all element
             removeHiddenClass();
+
+            // add color for all items
             addColor();
         }
 
@@ -59,6 +64,7 @@ tabButtons.forEach((button) => {
 });
 
 
+// Add colors for individual items
 const addColor = (arr) => {
     if (!arr)(arr = tabIndividualItems);
     arr.forEach((item, index) => {
@@ -68,4 +74,5 @@ const addColor = (arr) => {
     })
 };
 
+// call the addColor method
 addColor();
